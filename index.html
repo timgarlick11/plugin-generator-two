@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Plugin Generator two</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="container">
+		<div class="pagination-container">
+
+			<button class="start" data-filter="0"><span>1</span></button>
+
+			<button data-filter="1"><span>2</span></button>
+
+			<button data-filter="2"><span>3</span></button>
+
+			<button data-filter="3"><span>4</span></button>
+
+			<button data-filter="4"><span>5</span></button>
+
+			<button data-filter="5"><span>6</span></button>
+
+		</div>
+		<form action="">
+			<div class="input-seperator" id="industry" data-number="0">
+				<label class="input-title" for="">Which of the following best describe your Industry? </label>
+				<label>
+					<input class="industry" type="radio" name="industry" value="asset-tracking" required>
+					<div class="radio-alternate">Asset Tracking</div>
+				</label>
+				<label >
+					<input class="industry" type="radio" name="industry" value="manufacturing" >
+					<div class="radio-alternate">Manufacturing</div>
+				</label>
+				<label>
+					<input class="industry" type="radio" name="industry" value="retail">
+					<div class="radio-alternate">Retail</div>
+				</label> 
+				<label>
+					<input class="industry" type="radio" name="industry" value="service">
+					<div class="radio-alternate">Service</div>
+				</label> 
+				<label>
+					<input class="industry" type="radio" name="industry" value="distribution">
+					<div class="radio-alternate">Distribution</div>
+				</label>  
+				<div class="clear"></div>
+				<button type="button" class="showNext">Next</button>
+			</div>
+			<div class="input-seperator" data-number="1">
+				<label class="input-title" for="">What type of Accounting solution do you use? </label>
+				<label>
+					<input class="accounting-recommendation" type="radio" name="accounting-recommendation" value="qbd">
+					<div class="radio-alternate">QuickBooks Desktop</div>
+				</label>
+				<label>
+					<input class="accounting-recommendation" type="radio" name="accounting-recommendation" value="qbdh">
+					<div class="radio-alternate">QuickBooks Desktop Hosted</div>
+				</label>
+				<label>
+					<input class="accounting-recommendation" type="radio" name="accounting-recommendation" value="qbo">
+					<div class="radio-alternate">QuickBooks Online</div>
+				</label>
+				<label>
+					<input class="accounting-recommendation" type="radio" name="accounting-recommendation" value="xero">
+					<div class="radio-alternate">Xero</div>
+				</label>
+				<label>
+					<input class="accounting-recommendation" type="radio" name="accounting-recommendation" value="other-accounting">
+					<div class="radio-alternate">Other</div>
+				</label>
+				<div class="clear"></div>
+				<button type="button" class="showPrev">Previous</button>
+				<button type="button" class="showNext">Next</button>
+			</div>
+			<div class="input-seperator" id="revenue-recommendation" data-number="2">
+				<label class="input-title" for="">How many of the following apply to your revenue / sales process? </label>
+				<label>
+					<input class="revenue" type="checkbox" name="revenue" value="">
+					<div class="checkbox-alternate">Quotes - Jobs</div>
+				</label>
+				<label>
+					<input class="revenue" type="checkbox" name="revenue" value="lilypad">
+					<div class="checkbox-alternate">Outside Reps</div>
+				</label>
+				<label>
+					<input class="revenue" type="checkbox" name="revenue" value="fbc">
+					<div class="checkbox-alternate">Ecommerce</div>
+				</label>
+				<label>
+					<input class="revenue" type="checkbox" name="revenue" value="salespoint">
+					<div class="checkbox-alternate">Point of Sale</div>
+				</label>
+				<label>
+					<input class="revenue" type="checkbox" name="revenue" value="fbg">
+					<div class="checkbox-alternate">Delivery</div>
+				</label>
+				<label>
+					<input class="revenue" type="checkbox" name="revenue" value="">
+					<div class="checkbox-alternate">Distribution</div>
+				</label>
+				<div class="clear"></div>
+				<button type="button" class="showPrev">Previous</button>
+				<button type="button" class="showNext">Next</button>
+			</div>
+			<div class="input-seperator" data-number="3">
+				<label class="input-title">Are you looking to barcode or scan your inventory? </label>
+				<label>
+					<input class="barcode-recommendation" type="radio" name="barcode-recommendation" value="fbg">
+					<div class="radio-alternate">Yes</div>
+				</label>
+				<label>
+					<input class="barcode-recommendation" type="radio" name="barcode-recommendation" value="">
+					<div class="radio-alternate">No</div>
+				</label>
+				<label>
+					<input class="barcode-recommendation" type="radio" name="barcode-recommendation" value="">
+					<div class="radio-alternate">Potentially</div>
+				</label>
+				<div class="clear"></div>
+				<button type="button" class="showPrev">Previous</button>
+				<button type="button" class="showNext">Next</button>
+			</div>
+			<div class="input-seperator" id="plugin-recommendation" data-number="4">
+				<label class="input-title">Are any of the following advanced features applicable to your business? </label>
+				<label>
+					<input class="plugin-recommendation" type="checkbox" name="plugin-recommendation" value="shipstation">
+					<div class="checkbox-alternate">Shipping</div>
+				</label>
+				<label>
+					<input class="plugin-recommendation" type="checkbox" name="plugin-recommendation" value="avalara">
+					<div class="checkbox-alternate">Tax Integration</div>
+				</label>
+				<label>
+					<input class="plugin-recommendation" type="checkbox" name="plugin-recommendation" value="fba">
+					<div class="checkbox-alternate">Cloud Access</div>
+				</label>
+				<label>
+					<input class="plugin-recommendation" type="checkbox" name="plugin-recommendation" value="fbhs">
+					<div class="checkbox-alternate">Hosting</div>
+				</label>
+				<label>
+					<input class="plugin-recommendation" type="checkbox" name="plugin-recommendation" value="fbtl">
+					<div class="checkbox-alternate">Time and Labor</div>
+				</label>
+				<div class="clear"></div>
+				<button type="button" class="showPrev">Previous</button>
+				<button type="button" class="showNext">Next</button>
+			</div>
+			<div class="input-seperator" data-number="5">
+				<label class="input-title" for="">Please fill out information</label>				
+				<input type="text" class="customer" name="first-name" placeholder="First Name" required>
+				<input type="text" class="customer" name="last-name" placeholder="Last Name" required>
+				<input type="email" class="customer" name="email" placeholder="Email" required>
+				<input type="tel" class="customer" name="phone-number" placeholder="Phone Number" required>
+				<input type="text" class="customer" name="discount_code" placeholder="Discount Code" required>
+				<div class="clear"></div>
+
+				<button type="button" class="showPrev">Previous</button>
+				<button class="results" type="submit">Results</button>
+			</div>
+
+		</form>
+	</div>
+
+	<script src="js/bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="js/actions.js"></script>
+</body>
+</html>
