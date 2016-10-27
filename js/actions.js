@@ -1,15 +1,13 @@
 $(function ($) {
 
-	
+	console.log(this);
+// $('.software-recommendation').append('<img src=images/avalara-inventory-management.png');
 
-
-
-
-	var start = true;
-	var questionNumber = $('.pagination-container button');
-	var form = $('form');
-	var checkboxChecked = 0;
-	var detached;
+var start = true;
+var questionNumber = $('.pagination-container button');
+var form = $('form');
+var checkboxChecked = 0;
+var detached;
 
 	// $(".showNext, .showFirst").prop("disabled", true).css('opacity', '.5');
 	$("button").prop("disabled", true).css('opacity', '.5');//set all buttons to disabled on page load
@@ -85,14 +83,28 @@ $(function ($) {
 	form.on('submit', function(e) {
 
 		e.preventDefault();
-
-		formLoop($(this).serializeArray());
+		var form = $(this);
+		$('.load-container').fadeIn(300);
+		$('.form-container').fadeOut(1000);
+		setTimeout(function(){
+			formLoop(form.serializeArray());
+		}, 3500);
+		
 	});
 
-	var formLoop = function(form) {
 
+
+	var formLoop = function(form) {
+		console.log(form)
+		$('.load-container').fadeOut(300);
+		var url = "https://www.fishbowlinventory.com/";
 		for (var key in form) {
-			console.log(form[key].name + " : " + form[key].value);
+			if (form[key].name === "recommendation" && form[key].value !== "none") {
+
+				$('.software-recommendation').append('<a href=' + url + form[key].value + '><img src="images/' + form[key].value + '.png"></a>');
+
+
+			} 
 			
 
 		}

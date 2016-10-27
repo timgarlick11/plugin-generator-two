@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<div class="container">
+	<div class="form-container">
 		<div class="pagination-container">
 
 			<button class="start" data-filter="0"><span>1</span></button>
@@ -54,23 +54,23 @@
 			<div class="input-seperator" data-number="1">
 				<label class="input-title" for="">What type of Accounting solution do you use? </label>
 				<label>
-					<input class="accounting-recommendation" type="radio" name="accounting-recommendation" value="qbd">
+					<input class="accounting-recommendation" type="radio" name="recommendation" value="quickbooks-inventory-integration">
 					<div class="radio-alternate">QuickBooks Desktop</div>
 				</label>
 				<label>
-					<input class="accounting-recommendation" type="radio" name="accounting-recommendation" value="qbdh">
+					<input class="accounting-recommendation" type="radio" name="recommendation" value="quickbooks-inventory-integration">
 					<div class="radio-alternate">QuickBooks Desktop Hosted</div>
 				</label>
 				<label>
-					<input class="accounting-recommendation" type="radio" name="accounting-recommendation" value="qbo">
+					<input class="accounting-recommendation" type="radio" name="recommendation" value="quickbooks-online-inventory-integration">
 					<div class="radio-alternate">QuickBooks Online</div>
 				</label>
 				<label>
-					<input class="accounting-recommendation" type="radio" name="accounting-recommendation" value="xero">
+					<input class="accounting-recommendation" type="radio" name="recommendation" value="xero-inventory-management">
 					<div class="radio-alternate">Xero</div>
 				</label>
 				<label>
-					<input class="accounting-recommendation" type="radio" name="accounting-recommendation" value="">
+					<input class="accounting-recommendation" type="radio" name="recommendation" value="none">
 					<div class="radio-alternate">Other</div>
 				</label>
 				<div class="clear"></div>
@@ -80,27 +80,27 @@
 			<div class="input-seperator" id="revenue-recommendation" data-number="2">
 				<label class="input-title" for="">How many of the following apply to your revenue / sales process? </label>
 				<label>
-					<input class="revenue" type="checkbox" name="revenue" value="">
+					<input class="revenue" type="checkbox" name="recommendation" value="none">
 					<div class="checkbox-alternate">Quotes - Jobs</div>
 				</label>
 				<label>
-					<input class="revenue" type="checkbox" name="revenue" value="lilypad">
+					<input class="revenue" type="checkbox" name="recommendation" value="lilypadforfishbowl">
 					<div class="checkbox-alternate">Outside Reps</div>
 				</label>
 				<label>
-					<input class="revenue" type="checkbox" name="revenue" value="fbc">
+					<input class="revenue" type="checkbox" name="recommendation" value="fishbowl-commerce-inventory-integration">
 					<div class="checkbox-alternate">Ecommerce</div>
 				</label>
 				<label>
-					<input class="revenue" type="checkbox" name="revenue" value="salespoint">
+					<input class="revenue" type="checkbox" name="recommendation" value="none">
 					<div class="checkbox-alternate">Point of Sale</div>
 				</label>
 				<label>
-					<input class="revenue" type="checkbox" name="revenue" value="fbg">
+					<input class="revenue" type="checkbox" name="recommendation" value="fishbowl-go-inventory-integration">
 					<div class="checkbox-alternate">Delivery</div>
 				</label>
 				<label>
-					<input class="revenue" type="checkbox" name="revenue" value="">
+					<input class="revenue" type="checkbox" name="recommendation" value="none">
 					<div class="checkbox-alternate">Distribution</div>
 				</label>
 				<div class="clear"></div>
@@ -110,15 +110,15 @@
 			<div class="input-seperator" data-number="3">
 				<label class="input-title">Are you looking to barcode or scan your inventory? </label>
 				<label>
-					<input class="barcode-recommendation" type="radio" name="barcode-recommendation" value="fbg">
+					<input class="barcode-recommendation" type="radio" name="recommendation" value="fishbowl-go-inventory-integration">
 					<div class="radio-alternate">Yes</div>
 				</label>
 				<label>
-					<input class="barcode-recommendation" type="radio" name="barcode-recommendation" value="">
+					<input class="barcode-recommendation" type="radio" name="recommendation" value="none">
 					<div class="radio-alternate">No</div>
 				</label>
 				<label>
-					<input class="barcode-recommendation" type="radio" name="barcode-recommendation" value="">
+					<input class="barcode-recommendation" type="radio" name="recommendation" value="none">
 					<div class="radio-alternate">Potentially</div>
 				</label>
 				<div class="clear"></div>
@@ -128,23 +128,23 @@
 			<div class="input-seperator" id="plugin-recommendation" data-number="4">
 				<label class="input-title">Are any of the following advanced features applicable to your business? </label>
 				<label>
-					<input class="plugin-recommendation" type="checkbox" name="plugin-recommendation" value="shipstation">
+					<input class="plugin-recommendation" type="checkbox" name="recommendation" value="shipstation-inventory-management">
 					<div class="checkbox-alternate">Shipping</div>
 				</label>
 				<label>
-					<input class="plugin-recommendation" type="checkbox" name="plugin-recommendation" value="avalara">
+					<input class="plugin-recommendation" type="checkbox" name="recommendation" value="avalara-inventory-management">
 					<div class="checkbox-alternate">Tax Integration</div>
 				</label>
 				<label>
-					<input class="plugin-recommendation" type="checkbox" name="plugin-recommendation" value="fba">
+					<input class="plugin-recommendation" type="checkbox" name="recommendation" value="fishbowl-anywhere-inventory-integration">
 					<div class="checkbox-alternate">Cloud Access</div>
 				</label>
 				<label>
-					<input class="plugin-recommendation" type="checkbox" name="plugin-recommendation" value="fbhs">
+					<input class="plugin-recommendation" type="checkbox" name="recommendation" value="fishbowl-hosted-services-inventory-integration">
 					<div class="checkbox-alternate">Hosting</div>
 				</label>
 				<label>
-					<input class="plugin-recommendation" type="checkbox" name="plugin-recommendation" value="fbtl">
+					<input class="plugin-recommendation" type="checkbox" name="recommendation" value="fishbowl-time-and-labor-invenotry-integration">
 					<div class="checkbox-alternate">Time and Labor</div>
 				</label>
 				<div class="clear"></div>
@@ -165,6 +165,14 @@
 			</div>
 
 		</form>
+
+	</div>
+	<div class="load-container">
+		<div class="loader"><img src="/images/ring-one.gif" alt=""></div>
+	</div>
+	<div class="software-container">
+		
+		<div class="software-recommendation"></div>
 	</div>
 
 	<script src="js/bower_components/jquery/dist/jquery.min.js"></script>
