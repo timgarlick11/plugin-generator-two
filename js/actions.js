@@ -85,10 +85,10 @@ var detached;
 		e.preventDefault();
 		var form = $(this);
 		$('.load-container').fadeIn(300);
-		$('.form-container').fadeOut(1000);
+		$('.form-container').fadeOut(2500);
 		setTimeout(function(){
 			formLoop(form.serializeArray());
-		}, 3500);
+		}, 2800);
 		
 	});
 
@@ -97,18 +97,32 @@ var detached;
 	var formLoop = function(form) {
 		console.log(form)
 		$('.load-container').fadeOut(300);
+		$('.software-container').fadeIn(400).css('display', 'inline-block');
+		$('.software-recommendation').fadeIn(500);
 		var url = "https://www.fishbowlinventory.com/";
+		var duplicateCheckArray = [];
+		
 		for (var key in form) {
+
+			duplicateCheckArray.push(form[key].value);
+			var duplicateValue = duplicateCheckArray.indexOf(form[key].value)
+			if (form[key].name === "first-name") {
+				$('.software-recommendation h1').html("Thank You " + form[key].value + "!");
+				$('.software-recommendation h2').html("Below is a list of recommended software" + "<br>" +  "that will help streamline your business")
+			}
 			if (form[key].name === "recommendation" && form[key].value !== "none") {
-
+				
+				duplicateCheckArray.push(form[key].value);
 				$('.software-recommendation').append('<a href=' + url + form[key].value + '><img src="images/' + form[key].value + '.png"></a>');
+			}
 
 
-			} 
-			
+		} 
 
-		}
+		$('.software-recommendation').append('<div class="schedule-container"><div class="schedule"><a href="" class="schedule-link">Schedule Demo</a></div>' + '<div class="schedule"><a href="" class="schedule-link"> Free 14 Day Trial</a></div></div>');
+
 
 	}
+
 
 });
